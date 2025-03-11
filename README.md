@@ -1,12 +1,32 @@
-# React + Vite
+# Portfolio 1.0
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is my personal portfolio website, showcasing my skills and projects as a frontend developer.
 
-Currently, two official plugins are available:
+## Table of Contents
+- [About](#about)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Contact](#contact)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## About
+This portfolio is designed to provide a clear and engaging overview of my experience and abilities in frontend development. It includes examples of my work, information about my skills, and ways to contact me.
 
-## Expanding the ESLint configuration
+## Features
+- **Responsive Design:** The portfolio is fully responsive and looks great on all devices.
+- **Interactive Elements:** Smooth animations and interactive components enhance the user experience.
+- **Project Showcase:** Descriptions and links to my projects.
+- **About Me Section:** Information about my background, skills, and experience.
+- **Contact Information:** Easy ways to get in touch with me.
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Technologies Used
+- **React.js:** For building the user interface and component-based architecture.
+- **GSAP (GreenSock Animation Platform):** For smooth animations.
+- **Three.js:** For creating interactive 3D particles on the contact page.
+- **Routing:** React-Router Used for client-side routing and navigation.
+- **HTML5, CSS3, JavaScript:** Core web technologies.
+- **Vite:** Used as the build tool for fast development.
+
+## Contact
+- **Email:** vinaysharma511511@gmail.com
+- **LinkedIn:** https://www.linkedin.com/feed/
+- **GitHub:** https://github.com/87vinay
