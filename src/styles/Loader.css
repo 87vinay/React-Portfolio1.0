@@ -1,0 +1,127 @@
+@font-face {
+    font-family: "mm";
+    src: url(../assets/fonts/MM-fonts.98e08ce0fbf43c3ea261.woff2);
+  }
+  .loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    color: #2c3333;
+  }
+  .loader-bottom {
+    position: absolute;
+    bottom: 0%;
+    left: 1%;
+    font-size: 3rem;
+    font-family: "mm", Arial, sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .char {
+    display: inline-block;
+    transform-origin: center;
+  }
+  .loader-progress {
+    font-size: 5rem;
+    font-weight: bold;
+    position: relative;
+    height: 100px;
+    overflow: hidden;
+  }
+  .number-container {
+    display: flex;
+    position: relative;
+    font-size: 4rem;
+    font-weight: bold;
+  }
+  .digit {
+    display: inline-block;
+    position: relative;
+    min-width: 2ch;
+    text-align: center;
+  }
+  .number-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+  }
+  .number.current {
+    display: flex;
+    font-size: 4rem;
+    font-weight: bold;
+  }
+  .number.current span {
+    display: inline-block;
+    min-width: 0.6em;
+    text-align: center;
+  }
+  .hidden-digit {
+    opacity: 0;
+    visibility: hidden;
+  }
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(50%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .loader-container {
+    font-family: "mm";
+    position: relative;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+  }
+  .loader-container .initials {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    margin-bottom: 1.8rem;
+  }
+  .visit-website {
+    position: relative;
+    border: none;
+    font-size: 1.9rem;
+    font-family: 'mm';
+    font-weight: normal;
+    cursor: pointer;
+    color: #2c3333;
+    text-transform: uppercase;
+  }
+  .visit-website:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1.3px;
+    width: 100%;
+    height: 3px;
+    background-color: #2c3333;
+    transition: transform 0.3s ease;
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+  .visit-website:hover:after {
+    transform: scaleX(0);
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @media(max-width: 768px) {
+    .loader-bottom {
+      font-size: 3rem;
+      left: 1%;
+    }
+  }

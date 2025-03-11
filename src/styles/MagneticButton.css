@@ -1,0 +1,14 @@
+.magnetic-button {
+  transition: transform 0.2s ease;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  font-family: "aeonik";
+  font-weight: normal;
+  color: white;
+  background: url(../assets/fonts/texture-backdrop.svg);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display: block;
+  margin-left: 24rem;
+}

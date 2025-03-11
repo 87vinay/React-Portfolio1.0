@@ -1,0 +1,232 @@
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.form-container {
+  flex: 1;
+  max-width: 50%;
+}
+.particle-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.particle-container {
+  width: 40rem;
+  height: 28rem;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.contact-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  color: black;
+  position: relative;
+  bottom: 10rem;
+}
+.contact-title {
+  font-family: "mm";
+  font-size: 14rem;
+  font-weight: normal;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  color: #212121;
+}
+.contact-form {
+  width: 100%;
+  max-width: 600px;
+  margin-left: 5%;
+}
+.form-group {
+  position: relative;
+  margin-bottom: 3rem;
+}
+.form-input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 1.2rem;
+  color: #333;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+.form-input:focus ~ .form-label,
+.form-input:valid ~ .form-label {
+  top: -20px;
+  font-size: 1rem;
+  color: black;
+}
+.form-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1.2rem;
+  color: #888;
+  pointer-events: none;
+  transition: 0.3s ease all;
+  display: inline-block;
+}
+.form-group:hover .form-label {
+  transform: scaleX(1.1);
+  transform-origin: left;
+}
+.form-input:focus ~ .form-label,
+.form-input:valid ~ .form-label {
+  top: -20px;
+  font-size: 0.9rem;
+}
+.form-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 85%;
+  height: 1px;
+  background: gray;
+}
+.form-input:focus ~ .form-line,
+.form-input:valid ~ .form-line {
+  height: 2px;
+  background: black;
+}
+textarea.form-input {
+  min-height: 100px;
+  height: 100px;
+  resize: none;
+  overflow-y: auto;
+  margin-bottom: 5px;
+  line-height: 1.5;
+  color: #333;
+}
+.submit-btn {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-family: "aeonik";
+  font-weight: lighter;
+  color: white;
+  background: url(../assets/fonts/texture-backdrop.svg);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: block;
+  margin-left: 24rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .contact-title {
+    font-size: 10rem;
+  }
+  .particle-container {
+    width: 30rem;
+    height: 24rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  .contact-title {
+    font-size: 8rem;
+    margin-bottom: 1.5rem;
+  }
+  .contact-content {
+    flex-direction: column;
+  }
+  .particle-wrapper {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .form-container {
+    max-width: 80%;
+    width: 100%;
+  }
+  .contact-form {
+    margin-left: 0;
+    max-width: 100%;
+  }
+  .submit-btn {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .contact-section {
+    padding: 1.2rem;
+  }
+  .contact-title {
+    font-size: 11rem;
+  }
+  .contact-form{
+    margin-top: 1rem;
+  }
+  .particle-container {
+    width: 100%;
+    max-width: 38rem;
+    height: 20rem;
+  }
+  .form-line{
+    width: 100%;
+  }
+  .form-container {
+    max-width: 90%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .contact-section {
+    padding: 1rem;
+  }
+  .contact-title {
+    font-size: 7rem;
+    margin-bottom: 1rem;
+  }
+  .particle-container {
+    height: 16rem;
+  }
+  .form-container {
+    max-width: 100%;
+    margin-top: 1.5rem;
+  }
+  .form-group {
+    margin-bottom: 2rem;
+  }
+  .form-input {
+    font-size: 1rem;
+  }
+  .form-label {
+    font-size: 1.12rem;
+  }
+  .form-line{
+    width: 100%;
+  }
+  .submit-btn {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    box-shadow: 5px 6px 8px rgba(0, 0, 0, 0.4);
+  }
+}
+@media screen and (max-width: 375px) {
+  .contact-title {
+    font-size: 12rem;
+    line-height: 1;
+  }
+  .particle-container {
+    height: 14rem;
+  }
+  textarea.form-input {
+    min-height: 80px;
+    height: 80px;
+  }
+  .form-line{
+    width: 100%;
+  }
+  .submit-btn {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    margin-bottom: -3rem;
+  }
+}

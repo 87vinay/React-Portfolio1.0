@@ -1,0 +1,112 @@
+.footer {
+  background: url(../assets/fonts/texture-backdrop.svg);
+  background-size: cover;
+  background-position: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 30px 30px 6px 30px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 200px;
+  margin-top: 0;
+}
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-title {
+  font-size: 50px;
+  font-family: "mm";
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: normal;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
+}
+.footer-title:hover {
+  color: gray;
+  text-decoration: underline;
+}
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+.social-icons a {
+  color: white;
+  font-size: 20px;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: gray;
+}
+.footer-left {
+  text-align: left;
+  font-size: 15px;
+  position: relative;
+  top: 90px;
+  font-family: "aeonik";
+}
+.footer-bottom {
+  text-align: right;
+  font-size: 14px;
+  line-height: 0.8;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 20px;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+  }
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .footer-title {
+    font-size: 35px;
+    margin-bottom: 10px;
+  }
+  .social-icons {
+    gap: 10px;
+  }
+  .social-icons a {
+    font-size: 18px;
+  }
+  .footer-left {
+    text-align: center;
+    font-size: 14px;
+    top: 10px;
+  }
+  .footer-bottom {
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.5;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer {
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+  }
+  .footer-title {
+    font-size: 37px;
+  }
+  .social-icons a {
+    font-size: 16px;
+  }
+  .footer-left {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .footer-bottom {
+    font-size: 12px;
+  }
+}
