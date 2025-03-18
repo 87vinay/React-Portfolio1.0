@@ -2,6 +2,8 @@
 
 This is my personal portfolio website, showcasing my skills and projects as a frontend developer.
 
+![Website Preview](src/assets/images/websiteimg.png)
+
 ## Table of Contents
 - [About](#about)
 - [Features](#features)
