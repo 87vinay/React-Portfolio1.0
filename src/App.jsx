@@ -4,6 +4,7 @@ import Loader from "./Components/Loader";
 import MainPage from "./Components/MainPage";
 import AboutMe from "./Components/AboutMe";
 import ProjectSection from "./Components/ProjectSection";
+import MouseEffect from "./MouseEffect";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const App = () => {
@@ -11,6 +12,7 @@ const App = () => {
 
   return (
     <Router>
+      <MouseEffect />
       {!showMainPage ? (
         <Loader onComplete={() => setShowMainPage(true)} />
       ) : (

@@ -21,21 +21,15 @@ const AboutSection = () => {
 
   useEffect(() => {
     const container = containerRef.current;
-    const title = titleRef.current;
-
-    gsap.set(title.children, { y: 100, opacity: 0 });
-    gsap.set(descriptionRefs.current, { y: 180 });
-
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: container,
         start: "top 60%",
         end: "bottom center",
-        onLeaveBack: () => tl.reverse(),
+        toggleActions: "play none none reverse", 
       },
     });
-
-    tl.to(title.children, {
+    tl.to(".about-title-letter-wrapper span", {
       y: 0,
       opacity: 1,
       duration: 1,
@@ -43,7 +37,7 @@ const AboutSection = () => {
       ease: "power4.out",
       transform: (index) => `translate3d(0, ${index * 15}px, 0)`,
     }).to(
-      descriptionRefs.current,
+      ".about-description-text",
       {
         y: 0,
         duration: 0.8,
@@ -54,6 +48,9 @@ const AboutSection = () => {
     );
 
     return () => {
+      if (tl.scrollTrigger) {
+        tl.scrollTrigger.kill();
+      }
       tl.kill();
     };
   }, []);
@@ -83,7 +80,7 @@ const AboutSection = () => {
           <h1 className="about-title-text" ref={titleRef}>
             {letters.map((letter, index) => (
               <span key={index} className="about-title-letter-wrapper">
-                <span>{letter}</span>
+                <span className="hidden-title">{letter}</span>
               </span>
             ))}
           </h1>
@@ -93,7 +90,7 @@ const AboutSection = () => {
             {descriptions.map((desc, index) => (
               <div key={index} className="about-description-wrapper">
                 <span
-                  className="about-description-text"
+                  className="about-description-text hidden-description"
                   ref={(el) => (descriptionRefs.current[index] = el)}
                 >
                   {desc}
@@ -107,7 +104,7 @@ const AboutSection = () => {
         ref={buttonRef}
         className={`about-more-button ${isTouched ? "touched" : ""}`}
       >
-         <Link to="/aboutme">more about me</Link> 
+        <Link to="/aboutme">more about me</Link>
       </div>
     </div>
   );

@@ -31,6 +31,13 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.hidden-title {
+  opacity: 0;
+  transform: translateY(100px);
+}
+.hidden-description {
+  transform: translateY(180px);
+}
 .about-content {
   margin-top: 60px;
 }
