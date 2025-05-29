@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState, useCallback } from "react";
 import gsap from "gsap";
 import AboutSection from "./AboutSection";
 import ProjectSection from "./ProjectSection";
+import FreelanceSection from "./FreelanceSection";
 import SkillsSection from "./SkillsSection";
 import ContactSection from "./ContactSection";
 import Footer from "./Footer";
@@ -192,6 +193,7 @@ const MainPage = () => {
       <AboutSection />
       <ProjectSection />
       <SkillsSection />
+      <FreelanceSection />
       <ContactSection />
       <Footer />
       <ScrollIndicator />

@@ -1,0 +1,415 @@
+.freelance-section {
+  min-height: 100vh;
+  position: relative;
+  padding: 10px 20px;
+  color: #2c3333;
+}
+.floating-elements-freelance {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+.floating-circle-freelance {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    rgba(44, 51, 51, 0.05),
+    rgba(107, 114, 128, 0.03)
+  );
+  border: 2px solid rgba(44, 51, 51, 0.1);
+}
+.circle-1-freelance {
+  width: 300px;
+  height: 300px;
+  top: 10%;
+  right: 10%;
+}
+.circle-2-freelance {
+  width: 200px;
+  height: 200px;
+  bottom: 20%;
+  left: 5%;
+}
+.circle-3-freelance {
+  width: 150px;
+  height: 150px;
+  top: 50%;
+  left: 50%;
+}
+.decorative-dots-freelance {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  opacity: 1;
+}
+.dot-freelance {
+  width: 5px;
+  height: 5px;
+  background: black;
+  border-radius: 50%;
+  position: absolute;
+  animation: dotFloat 4s ease-in-out infinite;
+}
+.dot-freelance:nth-child(1) {
+  top: 0;
+  left: 0;
+  animation-delay: 0s;
+}
+.dot-freelance:nth-child(2) {
+  top: 0;
+  right: 0;
+  animation-delay: 0.5s;
+}
+.dot-freelance:nth-child(3) {
+  bottom: 0;
+  left: 0;
+  animation-delay: 1s;
+}
+.dot-freelance:nth-child(4) {
+  bottom: 0;
+  right: 0;
+  animation-delay: 1.5s;
+}
+.dot-freelance:nth-child(5) {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-delay: 2s;
+}
+@keyframes dotFloat {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: translateY(0px);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateY(-10px);
+  }
+}
+.dots-1-freelance {
+  top: 15%;
+  left: 15%;
+}
+.dots-2-freelance {
+  bottom: 25%;
+  right: 20%;
+}
+.container-freelance {
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+.section-header-freelance {
+  text-align: center;
+  margin-bottom: 80px;
+  opacity: 0;
+  transform: translateY(50px);
+}
+.section-title-freelance {
+  font-size: clamp(5rem, 12vw, 10rem);
+  text-transform: uppercase;
+  font-weight: normal;
+  font-family: "mm";
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  line-height: 1.1;
+  position: relative;
+}
+.section-subtitle-freelance {
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  color: #6b7280;
+  max-width: 600px;
+  margin: 30px auto 0;
+  line-height: 1.6;
+}
+.status-badge-freelance {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(34, 197, 94, 0.1);
+  border: 2px solid rgba(34, 197, 94, 0.3);
+  padding: 12px 24px;
+  border-radius: 50px;
+  margin-top: 30px;
+  opacity: 0;
+  transform: translateY(20px);
+  box-shadow: 0 4px 15px rgba(34, 197, 94, 0.1);
+}
+.status-dot-freelance {
+  width: 8px;
+  height: 8px;
+  background: #22c55e;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.2);
+  }
+}
+.projects-grid-freelance {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 40px;
+  margin: 80px 0;
+}
+.project-card-freelance {
+  background: #ffffff;
+  border: 2px solid #e5e7eb;
+  border-radius: 20px;
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(100px) rotateX(15deg);
+  transition: all 0.4s ease;
+  box-shadow: 0 10px 30px rgba(44, 51, 51, 0.08);
+}
+.project-card-freelance::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(44, 51, 51, 0.05),
+    transparent
+  );
+  transition: left 0.6s ease;
+}
+.project-card-freelance:hover::before {
+  left: 100%;
+}
+.project-card-freelance:hover {
+  transform: translateY(-10px) rotateX(0deg);
+  border-color: #2c3333;
+  box-shadow: 0 25px 50px rgba(44, 51, 51, 0.15);
+}
+.project-number-freelance {
+  font-size: 4rem;
+  font-family: "mm";
+  background: linear-gradient(135deg, #2c3333, #6b7280);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  margin-bottom: 20px;
+  position: relative;
+}
+.project-number-freelance::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(90deg, #2c3333, transparent);
+}
+.project-title-freelance {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #2c3333;
+}
+.project-description-freelance {
+  color: #6b7280;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+.tech-stack-freelance {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+.tech-tag-freelance {
+  background: #f3f4f6;
+  border: 1px solid #d1d5db;
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  color: #2c3333;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.tech-tag-freelance:hover {
+  background: #2c3333;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+.project-link-freelance {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #2c3333;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
+  padding-bottom: 2px;
+}
+.project-link-freelance::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #2c3333;
+  transition: width 0.3s ease;
+}
+.project-link-freelance:hover::after {
+  width: 100%;
+}
+.project-link-freelance:hover {
+  transform: translateX(10px);
+}
+.cta-section-freelance {
+  text-align: center;
+  margin-top: 100px;
+  padding: 60px 40px;
+  background: #ffffff;
+  border-radius: 30px;
+  border: 2px solid #e5e7eb;
+  opacity: 0;
+  transform: translateY(50px);
+  box-shadow: 0 20px 40px rgba(44, 51, 51, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+.cta-section-freelance::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #2c3333, #6b7280, #2c3333);
+  background-size: 200% 100%;
+  animation: shimmer 3s ease-in-out infinite;
+}
+@keyframes shimmer {
+  0%,
+  100% {
+    background-position: -200% 0;
+  }
+  50% {
+    background-position: 200% 0;
+  }
+}
+.cta-title-freelance {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #2c3333;
+}
+.cta-description-freelance {
+  font-size: 1.2rem;
+  color: #6b7280;
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cta-buttons-freelance {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.btn-freelance {
+  padding: 16px 32px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+.btn-primary-freelance {
+  background: #2c3333;
+  color: white;
+  box-shadow: 0 8px 25px rgba(44, 51, 51, 0.2);
+}
+.btn-primary-freelance:hover {
+  background: #1f2626;
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(44, 51, 51, 0.3);
+}
+.btn-secondary-freelance {
+  background: transparent;
+  color: #2c3333;
+  border: 2px solid #2c3333;
+}
+.btn-secondary-freelance:hover {
+  background: #2c3333;
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(44, 51, 51, 0.2);
+}
+@media (max-width: 768px) {
+  .freelance-section {
+    padding: 20px 15px;
+  }
+  .projects-grid-freelance {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin: 60px 0;
+  }
+  .project-card-freelance {
+    padding: 30px 25px;
+  }
+  .project-number-freelance {
+    font-size: 3rem;
+  }
+  .cta-section-freelance {
+    margin-top: 60px;
+    padding: 40px 20px;
+  }
+  .cta-buttons-freelance {
+    flex-direction: column;
+    align-items: center;
+  }
+  .btn-freelance {
+    width: 100%;
+    max-width: 280px;
+  }
+  .floating-circle-freelance {
+    opacity: 0.3;
+  }
+}
+@media (max-width: 480px) {
+  .section-title-freelance {
+    font-size: clamp(7rem, 12vw, 10rem);
+  }
+  .project-card-freelance {
+    padding: 25px 20px;
+  }
+  .tech-stack-freelance {
+    gap: 8px;
+  }
+  .tech-tag-freelance {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+}
