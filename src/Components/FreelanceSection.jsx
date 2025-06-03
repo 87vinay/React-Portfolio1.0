@@ -17,7 +17,6 @@ const FreelanceSection = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Header animations
       gsap.to(headerRef.current, {
         opacity: 1,
         y: 0,
@@ -33,8 +32,6 @@ const FreelanceSection = () => {
         ease: "power3.out",
         delay: 1,
       });
-
-      // Project cards animation with ScrollTrigger
       projectCardsRef.current.forEach((card, index) => {
         if (card) {
           gsap.to(card, {
@@ -53,8 +50,6 @@ const FreelanceSection = () => {
           });
         }
       });
-
-      // CTA section animation
       gsap.to(ctaSectionRef.current, {
         opacity: 1,
         y: 0,
@@ -67,8 +62,6 @@ const FreelanceSection = () => {
           toggleActions: "play none none reverse",
         },
       });
-
-      // Tech tags animation
       techTagsRef.current.forEach((tag, index) => {
         if (tag) {
           gsap.set(tag, { opacity: 0, scale: 0.8 });
@@ -86,8 +79,6 @@ const FreelanceSection = () => {
           });
         }
       });
-
-      // Parallax effect for floating elements
       floatingCirclesRef.current.forEach((circle, index) => {
         if (circle) {
           gsap.to(circle, {
@@ -100,8 +91,6 @@ const FreelanceSection = () => {
           });
         }
       });
-
-      // Decorative dots animation
       decorativeDotsRef.current.forEach((dotGroup) => {
         if (dotGroup) {
           gsap.to(dotGroup, {
@@ -159,7 +148,7 @@ const FreelanceSection = () => {
       number: "01",
       title: "Fibrelastic Composites",
       description:
-        "A modern website for Fibrelastic Composites, built to showcase the company’s products, innovations, and industry applications. The site emphasizes the brand's core offerings and facilitates easy user navigation. I also managed domain setup, hosting configuration, and implemented basic SEO optimizations to enhance visibility and performance.",
+        "A modern website for Fibrelastic Composites, built to showcase the company's products, innovations, and industry applications. The site emphasizes the brand's core offerings and facilitates easy user navigation. I also managed domain setup, hosting configuration, and implemented basic SEO optimizations to enhance visibility and performance.",
       techStack: [
         "HTML5",
         "CSS3",
@@ -169,7 +158,7 @@ const FreelanceSection = () => {
         "RESPONSIVE DESIGN",
         "STRUCTURED LAYOUT",
       ],
-      link: "#",
+      link: "https://fibrelastic.in",
     },
     {
       number: "02",
@@ -185,7 +174,7 @@ const FreelanceSection = () => {
         "RESPONSIVE DESIGN",
         "STRUCTURED LAYOUT",
       ],
-      link: "#",
+      link: "https://ritiktourandtravels.com",
     },
   ];
   return (
@@ -265,7 +254,12 @@ const FreelanceSection = () => {
                   </span>
                 ))}
               </div>
-              <a href={project.link} className="project-link-freelance">
+              <a 
+                href={project.link} 
+                className="project-link-freelance"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 View Project →
               </a>
             </div>
