@@ -41,47 +41,56 @@ const MainPage = () => {
         width: window.innerWidth <= 768 ? "100%" : "450px",
       });
       gsap.set(titleRef.current, { y: 50 });
+
       const tl = gsap.timeline();
       tl.fromTo(
         initialsRef.current,
         { x: -100, opacity: 0 },
-        { x: 0, opacity: 1, duration: 1, ease: "power2.out" }
+        { x: 0, opacity: 1, duration: 0.7, ease: "power2.out" } 
       )
         .fromTo(
           menuIconRef.current,
           { opacity: 0, scale: 0 },
-          { opacity: 1, scale: 1.5, duration: 0.5, ease: "power4.out" }
+          { opacity: 1, scale: 1.5, duration: 0.4, ease: "power4.out" }, 
+          "-=0.2" 
         )
         .to(menuIconRef.current, {
           scale: 1,
-          duration: 0.6,
+          duration: 0.5, 
           ease: "bounce.out",
         })
-        .to(initialsRef.current, {
-          duration: 1,
-          x: 0,
-          opacity: 0,
-          ease: "power2.out",
-        })
+        .to(
+          initialsRef.current,
+          {
+            duration: 0.7, 
+            x: 0,
+            opacity: 0,
+            ease: "power2.out",
+          },
+          "-=0.2"
+        ) 
         .fromTo(
           fullNameRef.current,
           { opacity: 0, scaleX: 0 },
           {
             opacity: 1,
             scaleX: 1,
-            duration: 1,
-            ease: "bounce.out",
-          }
+            duration: 0.8, 
+            ease: "back.out(1.5)", 
+          },
+          "-=0.3" 
         )
         .fromTo(
           titleRef.current,
           { opacity: 0, y: 50 },
-          { opacity: 1, y: 0, duration: 1, ease: "back.out(1.9)" }
+          { opacity: 1, y: 0, duration: 0.7, ease: "back.out(1.7)" },
+          "-=0.4" 
         );
     }
 
     return () => clearInterval(timer);
   }, []);
+
   const toggleMenu = useCallback(() => {
     if (!menuIconRef.current || !menuBoxRef.current) return;
     const line1 = menuIconRef.current.querySelector(".line1");
@@ -104,21 +113,21 @@ const MainPage = () => {
       gsap.to(menuBox, {
         opacity: 1,
         y: 0,
-        duration: 0.4,
+        duration: 0.25, 
         ease: "power2.out",
         force3D: true,
       });
       gsap.to(line1, {
         rotation: 45,
         y: 4,
-        duration: 0.3,
+        duration: 0.2, 
         transformOrigin: "center center",
         force3D: true,
       });
       gsap.to(line2, {
         rotation: -45,
         y: -4,
-        duration: 0.3,
+        duration: 0.2, 
         transformOrigin: "center center",
         force3D: true,
       });
@@ -126,7 +135,7 @@ const MainPage = () => {
       gsap.to(menuBox, {
         opacity: 0,
         y: "-10vh",
-        duration: 0.3,
+        duration: 0.2, 
         ease: "power2.in",
         force3D: true,
         onComplete: () => {
@@ -136,7 +145,7 @@ const MainPage = () => {
       gsap.to([line1, line2], {
         rotation: 0,
         y: 0,
-        duration: 0.3,
+        duration: 0.2, 
         transformOrigin: "center center",
         force3D: true,
         stagger: 0,
